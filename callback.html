@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Authorisation — WHS Motor Bot</title>
+<style>body{font-family:-apple-system,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#f5f5f5}.box{background:#fff;border-radius:12px;padding:40px;text-align:center;max-width:400px}h1{margin:0 0 12px;font-size:1.3em}p{color:#555}</style>
+</head><body>
+<div class="box"><h1>✅ Authorisation Successful</h1><p>WHS Motor Bot has been authorised. You may close this window.</p></div>
+<script>
+const code=new URLSearchParams(location.search).get('code');
+if(code)fetch('http://localhost:8765/callback?code='+encodeURIComponent(code)).catch(()=>{});
+</script></body></html>
